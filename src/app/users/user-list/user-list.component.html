@@ -1,0 +1,23 @@
+<button (click)="addUser()">Agregar usuario</button>
+
+<table class="table">
+  <th>Indice</th>
+  <th>userId</th>
+  <th>Id</th>
+  <th>Title</th>
+  <th>completed</th>
+  <th>Acciones</th>
+  <tbody>
+  <tr *ngFor="let user of users; let i=index">
+    <td>{{ i+1 }}</td>
+    <td>{{ user.userId }}</td>
+    <td>{{ user.id }}</td>
+    <td>{{ user.title }}</td>
+    <td>{{ user.completed ? 'SI' : 'NO' }}</td>
+    <td>
+      <button (click)="editUser(user)">Editar</button>
+      <button (click)="deleteUser(user)">Eliminar</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

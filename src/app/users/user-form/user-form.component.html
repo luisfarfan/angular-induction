@@ -1,0 +1,12 @@
+<form [formGroup]="userForm">
+  <input formControlName="userId" type="number" placeholder="userId">
+  <input formControlName="title" type="text" placeholder="Title">
+  <input formControlName="completed" type="checkbox">
+</form>
+
+<button (click)="saveUser()" type="button">Guardar Información</button>
+<button (click)="comeBack()" type="button">Regresar</button>
+
+<pre>
+  {{ userForm.getRawValue() | json }}
+</pre>
